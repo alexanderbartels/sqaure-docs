@@ -13,7 +13,8 @@
 		"dev": "rollup -cw",
 		"lint": "eslint --ignore-path ../../.gitignore \"src/**/*.{ts,mjs,js,svelte}\" && npm run check-format",
 		"format": "npm run check-format -- --write",
-		"check-format": "prettier --check . --config ../../.prettierrc --ignore-path ../../.gitignore"
+		"check-format": "prettier --check . --config ../../.prettierrc --ignore-path ../../.gitignore",
+		"release": "standard-version"
 	},
 	"repository": {
 		"type": "git",
