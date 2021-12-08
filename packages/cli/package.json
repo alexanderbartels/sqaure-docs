@@ -1,6 +1,6 @@
 {
 	"name": "@square-docs/cli",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "cli to use square-docs to generate website- and pdf-documents",
 	"main": "index.js",
 	"type": "module",
