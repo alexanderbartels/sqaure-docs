@@ -1,19 +1,42 @@
 {
-  "name": "@square-docs/cli",
-  "version": "0.0.0",
-  "description": "cli to use square-docs to generate website- and pdf-documents",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexanderbartels/sqaure-docs.git"
-  },
-  "author": "Alexander Bartels",
-  "license": "GPL-3.0",
-  "bugs": {
-    "url": "https://github.com/alexanderbartels/sqaure-docs/issues"
-  },
-  "homepage": "https://github.com/alexanderbartels/sqaure-docs#readme"
+	"name": "@square-docs/cli",
+	"version": "0.0.0",
+	"description": "cli to use square-docs to generate website- and pdf-documents",
+	"main": "index.js",
+	"type": "module",
+	"bin": {
+		"square-docs": "square-docs-cli.js"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "rollup -c",
+		"dev": "rollup -cw",
+		"lint": "eslint --ignore-path ../../.gitignore \"src/**/*.{ts,mjs,js,svelte}\" && npm run check-format",
+		"format": "npm run check-format -- --write",
+		"check-format": "prettier --check . --config ../../.prettierrc --ignore-path ../../.gitignore"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/alexanderbartels/sqaure-docs.git"
+	},
+	"author": "Alexander Bartels",
+	"license": "GPL-3.0",
+	"bugs": {
+		"url": "https://github.com/alexanderbartels/sqaure-docs/issues"
+	},
+	"homepage": "https://github.com/alexanderbartels/sqaure-docs#readme",
+	"dependencies": {
+		"sade": "^1.7.4"
+	},
+	"devDependencies": {
+		"@types/sade": "^1.7.3",
+		"eslint": "^8.4.1",
+		"kleur": "^4.1.4",
+		"prettier": "^2.5.1",
+		"rollup": "^2.60.2",
+		"typescript": "^4.5.2"
+	},
+	"engines": {
+		"node": ">=16.13"
+	}
 }

@@ -18,5 +18,20 @@
   "homepage": "https://github.com/alexanderbartels/sqaure-docs#readme",
   "workspaces": [
     "packages/cli"
-  ]
+  ],
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^21.0.1",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.6",
+    "@rollup/plugin-replace": "^3.0.0",
+    "@rollup/plugin-typescript": "^8.3.0",
+    "@sveltejs/eslint-config": "github:sveltejs/eslint-config#v5.8.0",
+    "@typescript-eslint/eslint-plugin": "^5.6.0",
+    "@typescript-eslint/parser": "^5.6.0",
+    "eslint": "^8.4.1",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-svelte3": "^3.2.1",
+    "prettier": "^2.5.1",
+    "typescript": "^4.5.2"
+  }
 }
