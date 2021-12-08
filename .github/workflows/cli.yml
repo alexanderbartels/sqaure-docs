@@ -26,6 +26,8 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
+      - run: git config --global user.email "test@example.com"
+      - run: git config --global user.name "Alexander Bartels"
       - run: npm ci
       - run: npm run build --workspaces --if-present
       - run: npm run release -w packages/cli
