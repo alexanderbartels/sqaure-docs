@@ -32,4 +32,13 @@ jobs:
       - run: npm run build --workspaces --if-present
       - run: npm run release -w packages/cli
       - run: git push --follow-tags origin main
+      - run: npx extract-changelog-release packages/cli/CHANGELOG.md > CLI_RELEASE_BODY.md
+      - name: create release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
+          tag_name: ${{ steps.publish_tag.outputs.tag_name }}
+          body_path: CLI_RELEASE_BODY.md
       - run: npm publish -w packages/cli
