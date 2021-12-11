@@ -7,7 +7,7 @@ name: cli
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths: 
       - 'packages/cli/**'
 

@@ -7,7 +7,7 @@ name: config
 on:
   workflow_dispatch:
   push:
-    branches: [ master ]
+    branches: [ main ]
     paths: 
       - 'packages/config/**'
 
