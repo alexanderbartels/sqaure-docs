@@ -46,4 +46,6 @@ jobs:
           release_name: Release ${{ steps.publish_tag.outputs.tag_name }}
           tag_name: ${{ steps.publish_tag.outputs.tag_name }}
           body_path: CLI_RELEASE_BODY.md
-      - run: npm publish -w packages/cli
+      - run: npm publish -w packages/cli --access public
+        env:
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
