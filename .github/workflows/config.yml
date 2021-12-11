@@ -1,6 +1,6 @@
 # workflow to publish the cli project on npm
 
-name: cli
+name: config
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -9,7 +9,7 @@ on:
   push:
     branches: [ master ]
     paths: 
-      - 'packages/cli/**'
+      - 'packages/config/**'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -30,7 +30,7 @@ jobs:
       - run: git config --global user.name "Alexander Bartels"
       - run: npm ci
       - run: npm run build --workspaces --if-present
-      - run: npm run release -w packages/cli
+      - run: npm run release -w packages/config
       - name: publish tag
         id: publish_tag
         run: |
@@ -43,9 +43,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          release_name: Release @square-docs/cli ${{ steps.publish_tag.outputs.tag_name }}
+          release_name: Release @square-docs/config ${{ steps.publish_tag.outputs.tag_name }}
           tag_name: ${{ steps.publish_tag.outputs.tag_name }}
           body_path: CLI_RELEASE_BODY.md
-      - run: npm publish -w packages/cli --access public
+      - run: npm publish -w packages/config --access public
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}

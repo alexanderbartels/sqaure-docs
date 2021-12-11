@@ -17,7 +17,8 @@
   },
   "homepage": "https://github.com/alexanderbartels/sqaure-docs#readme",
   "workspaces": [
-    "packages/cli"
+    "packages/cli",
+    "packages/config"
   ],
   "devDependencies": {
     "@rollup/plugin-commonjs": "^21.0.1",

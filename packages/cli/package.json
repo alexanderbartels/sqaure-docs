@@ -14,7 +14,7 @@
 		"lint": "eslint --ignore-path ../../.gitignore \"src/**/*.{ts,mjs,js,svelte}\" && npm run check-format",
 		"format": "npm run check-format -- --write",
 		"check-format": "prettier --check . --config ../../.prettierrc --ignore-path ../../.gitignore",
-		"release": "standard-version"
+		"release": "standard-version -t @square-docs/cli@"
 	},
 	"repository": {
 		"type": "git",
@@ -27,12 +27,12 @@
 	},
 	"homepage": "https://github.com/alexanderbartels/sqaure-docs#readme",
 	"dependencies": {
+		"kleur": "^4.1.4",
 		"sade": "^1.7.4"
 	},
 	"devDependencies": {
 		"@types/sade": "^1.7.3",
 		"eslint": "^8.4.1",
-		"kleur": "^4.1.4",
 		"prettier": "^2.5.1",
 		"rollup": "^2.60.2",
 		"typescript": "^4.5.2"
