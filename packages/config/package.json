@@ -1,13 +1,13 @@
 {
   "name": "@square-docs/config",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "square doc configuration",
-	"main": "index.js",
-	"type": "module",
+  "main": "index.js",
+  "type": "module",
   "scripts": {
-		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "rollup -c",
-		"dev": "rollup -cw",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "dev": "rollup -cw",
     "lint": "eslint --ignore-path ../../.gitignore \"src/**/*.{ts,mjs,js,svelte}\" && npm run check-format",
     "format": "npm run check-format -- --write",
     "check-format": "prettier --check . --config ../../.prettierrc --ignore-path ../../.gitignore",
@@ -24,12 +24,12 @@
   },
   "homepage": "https://github.com/alexanderbartels/sqaure-docs#readme",
   "devDependencies": {
-		"eslint": "^8.4.1",
-		"prettier": "^2.5.1",
-		"rollup": "^2.60.2",
-		"typescript": "^4.5.2"
-	},
-	"engines": {
-		"node": ">=16.13"
-	}
+    "eslint": "^8.4.1",
+    "prettier": "^2.5.1",
+    "rollup": "^2.60.2",
+    "typescript": "^4.5.2"
+  },
+  "engines": {
+    "node": ">=16.13"
+  }
 }
